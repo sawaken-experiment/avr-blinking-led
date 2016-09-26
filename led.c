@@ -10,12 +10,10 @@ void sleep() {
 }
 
 int main() {
-  unsigned int i, j;
-
   DDRD = B10000000; // DDR = Data Direction Registor. PD7のみ出力にする.
   PORTD = B10000000; //PD7 = Hにする.
 
-  while(1) {
+  while (1) {
     PORTD ^= B10000000; // PD7の値を反転する.
     sleep();
   }
